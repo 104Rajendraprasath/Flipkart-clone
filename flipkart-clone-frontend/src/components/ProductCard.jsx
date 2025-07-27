@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext';
 // import styles from './ProductCard.module.css';
 
 const ProductCard = ({ product }) => {
-  const { addToCart } = useContext(CartContext);
+const { addToCart } = useContext(CartContext);
 
   return (
     // Card container: white background, rounded corners, shadow, and a subtle hover effect

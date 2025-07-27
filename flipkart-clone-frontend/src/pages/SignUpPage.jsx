@@ -23,7 +23,7 @@ const SignUpPage = () => {
     try {
       // Pass all required fields to the signup function
       await signup(name, email, password);
-      navigate('/');
+      navigate('/signin');
     } catch (err) {
       // Set a user-friendly error message
       setError('Failed to create account. The email may already be in use.');

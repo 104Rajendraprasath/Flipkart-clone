@@ -14,7 +14,7 @@ const SignInPage = () => {
     setError(null); // Reset error on new submission
     try {
       await signin(email, password);
-      navigate('/signup');
+      navigate('/');
     } catch (err) {
       // Set a user-friendly error message
       setError('Invalid email or password. Please try again.');
