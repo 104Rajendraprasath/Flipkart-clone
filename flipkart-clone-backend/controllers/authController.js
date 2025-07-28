@@ -78,3 +78,17 @@ exports.signin = async (req, res) => {
         res.status(500).send('Server Error');
     }
 };
+
+exports.getLoggedInUser = async (req, res) => {
+  try {
+    // MODIFY THIS LINE
+    const user = await User.findById(req.user.id)
+      .select('-password')
+      .populate('cart.product'); // <-- ADD THIS LINE TO POPULATE THE CART
+
+    res.json(user);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+};

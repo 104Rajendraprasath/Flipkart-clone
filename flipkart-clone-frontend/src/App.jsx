@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
 import CartPage from './pages/CartPage';
+import OrderSuccessPage from './pages/OrderSuccessPage';
 import { AuthContext } from './context/AuthContext';
 
 const ProtectedRoute = ({ children }) => {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/order-successful" element={<ProtectedRoute><OrderSuccessPage /></ProtectedRoute>} />
           <Route
             path="/cart"
             element={
