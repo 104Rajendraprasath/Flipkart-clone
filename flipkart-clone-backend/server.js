@@ -13,7 +13,7 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173',                         // Your local frontend for development
   'http://localhost:5174',                         // Another common Vite port, just in case
-  'https://astonishing-rabanadas-cafe89.netlify.app' // YOUR DEPLOYED NETLIFY FRONTEND
+  'https://astonishing-rabanadas-cafe89.netlify.app/' // YOUR DEPLOYED NETLIFY FRONTEND
 ];
 
 // 2. Create the CORS options object.
